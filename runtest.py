@@ -132,16 +132,7 @@ def process(stdout, expected_size):
 
 def test(output, input, results):
     """Perform the tests"""
-    # zip(output, input, results), but need to check if output is in same order as input/results
-    sorted_zip = []
-    for idx, out_line in enumerate(output):
-        out = out_line[0]
-        line = out_line[1]
-        if out is {}:
-            _log.error("no viable output retrieved for idx %s: %s" % (idx, out))
-            sys.exit(1)
-        sorted_zip.append((out, line, input.pop(), results.pop()))
-
+    sorted_zip = zip([o[0] for o in output], [o[1] for o in output], input, results)
     counter = [0, 0]
     for out, line, inp, res in sorted_zip:
         if res is None:

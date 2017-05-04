@@ -1,0 +1,23 @@
+"""
+{
+    "raw": None,
+    "expected" : None,
+},
+
+"""
+data = [
+    { 
+        "raw": "lmod::  username=vsc42163, cluster=raichu, jobid=, userload=yes, module=cluster/raichu, fn=/etc/modulefiles/vsc/cluster/raichu.lua",
+        "expected": {u'username': u'vsc42163', u'module_version': u'raichu', u'module_path=': u'/etc/modulefiles/vsc/cluster/raichu.lua', u'userload': u'yes', u'jobid': u'', u'cluster': u'raichu', u'module_name': u'cluster'},
+    },
+    {
+        "raw": "lmod::  username=vsc42163, cluster=raichu, jobid=2053205.master13.raichu.gent.vsc, userload=no, module=imkl/11.3.3.210-iimpi-2016b, fn=/apps/gent/CO7/sandybridge/modules/all/imkl/11.3.3.210-iimpi-2016b",
+        "expected": {u'cluster': u'raichu',
+ u'jobid': u'2053205.master13.raichu.gent.vsc',
+ u'module_name': u'imkl',
+ u'module_path=': u'/apps/gent/CO7/sandybridge/modules/all/imkl/11.3.3.210-iimpi-2016b',
+ u'module_version': u'11.3.3.210-iimpi-2016b',
+ u'userload': u'no',
+ u'username': u'vsc42163'},
+    },
+]
