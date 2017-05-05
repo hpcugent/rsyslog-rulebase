@@ -7,21 +7,29 @@
 """
 data = [
     {
-        "raw": "lmod::  username=vsc42163, cluster=raichu, jobid=, userload=yes, module=cluster/raichu, fn=/etc/modulefiles/vsc/cluster/raichu.lua",
+        "raw": "lmod::  username=vsc40075, cluster=raichu, jobid=, userload=yes, module=cluster/raichu, fn=/etc/modulefiles/vsc/cluster/raichu.lua",
         "expected": {
             u'filename': u'/etc/modulefiles/vsc/cluster/raichu.lua',
-            u'info': {u'cluster': u'raichu', u'jobid': u'', u'username': u'vsc42163'},
+            u'info': {u'cluster': u'raichu', u'jobid': u'', u'username': u'vsc40075'},
             u'module': {u'name': u'cluster', u'version': u'raichu'},
             u'userload': u'yes'
         },
     },
     {
-        "raw": "lmod::  username=vsc42163, cluster=raichu, jobid=2053205.master13.raichu.gent.vsc, userload=no, module=imkl/11.3.3.210-iimpi-2016b, fn=/apps/gent/CO7/sandybridge/modules/all/imkl/11.3.3.210-iimpi-2016b",
+        "raw": "lmod::  username=vsc40075, cluster=raichu, jobid=2053205.master13.raichu.gent.vsc, userload=no, module=imkl/11.3.3.210-iimpi-2016b, fn=/apps/gent/CO7/sandybridge/modules/all/imkl/11.3.3.210-iimpi-2016b",
         "expected": {
-            u'filename': u'/etc/modulefiles/vsc/cluster/raichu.lua',
-            u'info': {u'cluster': u'raichu', u'jobid': u'', u'username': u'vsc42163'},
-            u'module': {u'name': u'cluster', u'version': u'raichu'},
-            u'userload': u'yes'
+            u'filename': u'/apps/gent/CO7/sandybridge/modules/all/imkl/11.3.3.210-iimpi-2016b',
+            u'info': {u'cluster': u'raichu', u'jobid': u'2053205.master13.raichu.gent.vsc', u'username': u'vsc40075'},
+            u'module': {u'name': u'imkl', u'version': u'11.3.3.210-iimpi-2016b'},
+            u'userload': u'no'
         },
+    },
+    {
+        "raw": "lmod::  username=vsc40075, cluster=delcatty, jobid=, cmd=load, args=cluster/delcatty",
+        "expected": {
+            u'info': {u'cluster': u'delcatty', u'jobid': u'', u'username': u'vsc40075'},
+            u'command': u'load',
+            u'arguments': u'cluster/delcatty',
+        }
     },
 ]
