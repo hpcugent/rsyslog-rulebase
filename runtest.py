@@ -82,6 +82,7 @@ def prep_liblognorm():
     except:
         pass
     shutil.copytree(os.path.join(os.getcwd(), 'files'), RULEBASE_DIR)
+    os.environ['LIBLOGNORM_RULEBASES'] = RULEBASE_DIR
 
 
 def get_data(directory='data', globpattern='*'):

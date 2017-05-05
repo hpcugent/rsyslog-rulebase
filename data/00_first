@@ -6,7 +6,4 @@
 
 """
 data = [
-{ "raw": "lmod::  username=vsc42163, cluster=raichu, jobid=, userload=yes, module=cluster/raichu, fn=/etc/modulefiles/vsc/cluster/raichu.lua",
-  "expected": {u'username': u'vsc42163', u'module_version': u'raichu', u'module_path=': u'/etc/modulefiles/vsc/cluster/raichu.lua', u'userload': u'yes', u'jobid': u'', u'cluster': u'raichu', u'module_name': u'cluster'},
-},
 ]
