@@ -1,0 +1,23 @@
+data = [
+
+{
+    "raw": "kernel:: nfs: server 192.168.1.1 not responding, timed out",
+    "expected" :{
+        u'program': u'kernel',
+        u'nfs': {
+            u'reason': u'not responding, timed out',
+            u'server': u'192.168.1.1',
+        }
+    }
+},
+{
+    "raw": "kernel:: Error: state recovery failed on NFSv4 server 192.168.1.2 with error 2",
+    "expected" :{
+        u'program': u'kernel',
+        u'nfs': {
+            u'reason': u'state recovery failed',
+            u'server': u'192.168.1.2',
+        }
+    }
+},
+]
